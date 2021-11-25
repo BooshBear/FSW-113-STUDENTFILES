@@ -30,6 +30,33 @@
             { fname: 'Petra', balance: 500.35, rate: 4.9 },
             { fname: 'Reggie', balance: 0, rate: 7.2 }
         ]
+
+        
+
+        for (let i = 0; i < customers.length; i++) {
+            let letterDiv = document.getElementById("letterDiv")
+            let divz = document.createElement("div"); divz.setAttribute("class", "letter");
+            let p = document.createElement("p")
+
+            let bal = customers[i].balance
+            let fnamez = customers[i].fname
+            let ratez = customers[i].rate
+
+            if (bal < 0) {
+                p.innerHTML = "Hello " +fnamez+ ", this is an attempt to collect a debt owed to " +bankName+ ". Your account is past due by the amount of " + bal;
+            }
+            if (ratez > 0 < 5 && bal > 0) {
+                p.innerHTML = "Hello " +fnamez+ ", greetings from " +bankName+ ". Your balance is " +bal+ ". No need for action until next month." 
+            }
+            if (ratez > 5) {
+                p.innerHTML = "Hello " +fnamez+ ", greetings from " +bankName+ ". Because you are such a great customer, we're lowering your interest rate to " +(ratez - 1)+ "%." 
+            }
+
+            divz.appendChild(p);
+            letterDiv.appendChild(divz);
+        }
+        
+
         // Create a loop that iterates through the customers array. Based on the customer's balance, create a personalized copy 
         // of the appropriate letter text from below. Each letter should be contained within a div with the style of 'letter'.
 
