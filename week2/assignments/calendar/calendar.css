@@ -29,3 +29,9 @@
   padding: 3px;
   background-color: silver;
 }
+
+select {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}

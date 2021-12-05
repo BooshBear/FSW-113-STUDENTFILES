@@ -37,3 +37,46 @@ const parts = [
 // element that they will need to reserve a forklift, else remove the element
 
 // sum up the total number of parts and append that number to the text already in "totalItems" element
+for (let i = 0; i < parts.length; i++) {
+    let p = document.createElement("p")
+    p.innerHTML = parts[i].qty + " (" + parts[i].partNbr +") - "+ parts[i].partDescr;
+    let detailsList = document.getElementById("detailsList")
+    detailsList.appendChild(p);
+}
+
+for (let i = 0; i < parts.length; i++) {
+    if (parts[i].aisle == "B3") {
+        let p = document.createElement("p")
+        p.innerHTML = "item: " + parts[i].partNbr + " / " + parts[i].qty;
+        let specialPackaging = document.getElementById("specialPackaging")
+        specialPackaging.appendChild(p);
+    }
+}
+
+for (let i = 0; i < parts.length; i++) {
+    if (parts[i].aisle == "J4") {
+        let p = document.createElement("p")
+        p.innerHTML = "item: " + parts[i].partNbr + " / " + parts[i].qty + "\n\r Get Gloves";
+        let hazardousMaterials = document.getElementById("hazardousMaterials")
+        hazardousMaterials.appendChild(p); 
+    }
+}
+
+for (let i = 0; i < parts.length; i++) {
+    if (parts[i].aisle == "H1") {
+        let p = document.createElement("p")
+        p.innerHTML = "item: " + parts[i].partNbr + " / " + parts[i].qty + "\n\r Get Basket";
+        let smallItemsOnly = document.getElementById("smallItemsOnly")
+        smallItemsOnly.appendChild(p); 
+    } else {
+        let p = document.createElement("p")
+        p.innerHTML = "item: " + parts[i].partNbr + " / " + parts[i].qty + "\n\r Forklift Required";
+        let forkiftNeeded = document.getElementById("forkiftNeeded")
+        forkiftNeeded.appendChild(p); 
+    }
+}
+let sumall = parts.map(parts => parts.qty).reduce((x, y) => x + y, 0);
+let p = document.createElement("p")
+p.innerHTML = sumall;
+let totalItems = document.getElementById("totalItems")
+totalItems.appendChild(p);
