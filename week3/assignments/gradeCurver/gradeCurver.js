@@ -22,6 +22,7 @@ function applyBell(grade, index, ary) {
             ary[index] = 'F'
             break
     }
+    aryGrades.forEach(applyBell)
 }
 
 function convertArray(obj) {
@@ -38,31 +39,31 @@ function convertArray(obj) {
 // empty lines, can you get the number of lines down to 8?
 
 function curveGrades() {
-    **sum = function (accumulator, currentValue) {
-        return accumulator + currentValue
-    }
+    var sum = (accumulator, currentValue) => accumulator + currentValue
 
-    **sumGrades = function(array) {
-        return array.reduce(sum)
-    }
+    var sumGrades = (array) => array.reduce(sum)
 
-    **aryGrades = convertArray(document.querySelector('#scores'))
+    var aryGrades = convertArray(document.querySelector('#scores'))
 
-    **minGrade = aryGrades.reduce(function(a, b) {
-        return Math.min(a, b)
-    })
+    var minGrade = aryGrades.reduce((a, b) => Math.min(a, b))
     
-    **maxGrade = aryGrades.reduce(function(a, b) {
-        return Math.max(a, b)
-    })
-    
-    **mean = sumGrades(aryGrades) / aryGrades.length
+    var maxGrade = aryGrades.reduce((a, b) => Math.max(a, b))
 
-    **range = maxGrade - minGrade
+    var mean = sumGrades(aryGrades) / aryGrades.length
+
+    range = maxGrade - minGrade
 
     gradeSlice = range / 5
 
-    aryGrades.forEach(applyBell)
-
     // write the value of aryGrades to the grades div in the HTML document
+    let arygrade = document.getElementById("grades")
+    arygrade.innerHTML = applyBell(aryGrades);
 }
+
+let submit = document.getElementById("submit")
+submit.addEventListener("click", curveGrades);
+
+let reset = document.getElementById("reset")
+reset.addEventListener("click", function() {
+    
+})
