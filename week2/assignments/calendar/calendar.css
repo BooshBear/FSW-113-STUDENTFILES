@@ -3,6 +3,22 @@
   width: 525px;
   margin: 0 auto;
 }
+h2 {
+  text-align: center;
+  padding: 5px;
+  font-weight: 700;
+  grid-column: span 7;
+  border: silver 1px solid;
+  margin: 0;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+
+}
 
 .calendarTitle {
   text-align: center;

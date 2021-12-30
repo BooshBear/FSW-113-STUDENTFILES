@@ -1,12 +1,23 @@
 // modify this script to populate the month select you create in the HTML page from an array of month names
 // you can use either a for loop or an array.map to populate the select. remember that while arrays start with 
 // zero, month numbers go from 1-12
+const months = [" ","January","February","March","April","May","June","July","August","September","October","November","December"];
+var printCal = document.getElementById("printCal");
+for (let i = 1; i < months.length; i++) {
+    let opt = document.createElement("option")
+    opt.innerHTML = months[i];
+    printCal.appendChild(opt);
+}
+
 
 // modify this script to run a function called printCalendar() when the user clicks the "Go" button
-
+function printCalendar() {
+    return today = new Date(printCal.value + '/1/2021')
+}
+let button = document.getElementById("go");
+button.addEventListener("click", printCalendar());
 // modify this script to use the first day of the month the user selects in place of the const today 
 
-const today = new Date('5/1/2021')
 const month = today.getMonth()
 let days
 switch (month) {
