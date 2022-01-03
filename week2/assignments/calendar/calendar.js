@@ -11,13 +11,11 @@ for (let i = 1; i < months.length; i++) {
 
 
 // modify this script to run a function called printCalendar() when the user clicks the "Go" button
-function printCalendar() {
-    return today = new Date(printCal.value + '/1/2021')
-}
 let button = document.getElementById("go");
-button.addEventListener("click", printCalendar());
-// modify this script to use the first day of the month the user selects in place of the const today 
+button.addEventListener("click", printCalendar);
 
+function printCalendar() {
+    const today = new Date(printCal.value + '/1/2021')
 const month = today.getMonth()
 let days
 switch (month) {
@@ -56,3 +54,6 @@ while ( y < remainder) {
     document.getElementById('calendarDays').innerHTML += "<div class='blankDay'>&nbsp;</div>"
     y++
 }
+}
+
+// modify this script to use the first day of the month the user selects in place of the const today
