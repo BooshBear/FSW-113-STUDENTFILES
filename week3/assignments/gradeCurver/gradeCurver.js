@@ -1,8 +1,14 @@
 // declare each of the variables marked with "**" in the appropriate scope and using the appropriate type
 
 // create an event listener that calls the curveGrade() function when the Curve It!! button is clicked
-
+document.getElementById("submit").addEventListener(
+    "click", curveGrades());
+    
 // create an event listener that resets the scores and grades to their defaults when the Reset button is clicked
+let reset = document.getElementById("reset")
+reset.addEventListener("click", function() {
+
+})
 
 function applyBell(grade, index, ary) {
     switch (true) {
@@ -61,10 +67,5 @@ function curveGrades() {
     
 }
 
-document.getElementById("submit").addEventListener(
-    "click", curveGrades());
 
-let reset = document.getElementById("reset")
-reset.addEventListener("click", function() {
 
-})
