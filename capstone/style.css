@@ -3,3 +3,67 @@
     to the example as possible. You will need to use display:grid to make the 
     bug reports display in three columns (see week 4).
 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: honeydew;
+}
+body {
+    background-color: rgb(117, 102, 102);
+}
+button {
+    border: none;
+    border-radius: 50px;
+    background-color: indigo;
+    width: 90px;
+    height: 22px;
+}
+button:hover {
+    background-color: rgb(40, 2, 68);
+}
+select, option, input {
+    color: rgb(34, 33, 33);
+    
+}
+#reportWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+    border: floralwhite 2px solid;
+    border-radius: 40px;
+    margin-top: .5rem;
+    padding: .5rem;
+}
+.userInput {
+
+    margin-bottom: 1rem;
+}
+#bugForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 1rem;
+}
+
+
+#listWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    word-break: break-all;
+}
+.data {
+    float: left;
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid floralwhite;
+    border-radius: 40px;
+}
+o {
+    color: rgb(34, 33, 33);
+}

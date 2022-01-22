@@ -10,7 +10,7 @@
         { "sysID": 8,   "sysName": "Reservations",          "parentID": 2 },
         { "sysID": 9,   "sysName": "Logistics",             "parentID": 2 },
         { "sysID": 10,  "sysName": "Help Desk",             "parentID": 3 },
-        { "sysID": 11,  "sysName": "Database Maintenance",  "parentID": 3 },
+        { "sysID": 11,  "sysName": "Daatabase Maintennce",  "parentID": 3 },
         { "sysID": 12,  "sysName": "System Development",    "parentID": 3 }
     ]
 }
